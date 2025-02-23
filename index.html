@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> bordga</title>
+    <link rel="stylesheet" href="style css123.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1 dir="rtl">استاذ انس هكر</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Age</th>
+                
+            </tr>
+            
+        </thead>
+        
+        <tbody>
+            
+            <tr>
+                
+                <td>1</td>
+                
+                <td>khalf</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>basil</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>omar</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تشغيل صوت MP3</title>
+</head>
+<body>
+    <h1>play</h1>
+    <audio controls>
+        <source src="Rongorongo/The Rains of Castamere (Red Wedding Version).mp3" type="audio/mpeg">
+        عذراً، متصفحك لا يدعم تشغيل الصوت.
+    </audio>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div id="demo"></div>
+
+<script>
+document.getElementById("demo").innerHTML =
+    "Name is " + navigator.appName + ". Code name is " + navigator.appCodeName;
+</script>
+
+</body>
+</html>
+
+<img  onmouseover="makeBigger (this)" onmouseout="normalImage(this)" border="1" src="red wedding.jfif" alt="lobster" width="=50" height="50">
+<script>
+
+function makeBigger(x) {
+x.style.height = "80px";
+x.style.width ="80px"
+}
+function normalImage (x) {
+x.style.height = "32px"
+x.style.width= "32px";
+}
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validate Entry Example</title>
+    <script>
+        function validateEntry() {
+            var x = document.forms["validation"]["forename"].value;
+            if (x == null || x == "") {
+                alert("You cannot have a blank field. Please type in your forename.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="validation" action="validation_blank_field.asp" onsubmit="return validateEntry()" method="post">
+        Forename: <input type="text" name="forename" value="">
+        <input type="submit" value="Submit">
+    </form>
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Disable Combo Box Example</title>
+    <script>
+        function disableComboBox() {
+            document.getElementById("selectFish").disabled = true;
+        }
+
+        function enableComboBox() {
+            document.getElementById("selectFish").disabled = false;
+        }
+    </script>
+</head>
+<body>
+    <select id="selectFish">
+        <option>Shelfish</option>
+        <option>Monkfish</option>
+        <option>Prawns</option>
+    </select>
+
+    <input type="button" onclick="disableComboBox()" value="Disable list">
+    <input type="button" onclick="enableComboBox()" value="Enable list">
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML Geolocation</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
